@@ -5,21 +5,27 @@
 
 class DateClass
 {
-  public:
+  //public:
     int m_year{};
     int m_month{};
     int m_day{};
 
+  public:
   void print()
   {
       std::cout << m_day << "/" << m_month << "/" << m_year << std::endl;
+  }
+
+  private:
+  DateClass(int y, int m, int d) : m_year(y), m_month(m), m_day(d)
+  {
   }
 };
 
 int main()
 {
-  DateClass d1{2023, 01, 16}; // uniform initializer works
-  //DateClass d2(2023, 01, 17); //direct initializer won't work as it requires constructor.
-  d1.print();
+  //DateClass d1{2023, 01, 16}; // uniform initializer works
+  DateClass d2(2023, 01, 17); //direct initializer won't work as it requires constructor.
+  d2.print();
   return 0;
 }

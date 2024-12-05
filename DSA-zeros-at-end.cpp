@@ -28,8 +28,9 @@ void move(int (&arr)[N], int start, int end)
 int main() {
     //std::array<int, 7> arr = {1, 0, 50, 4, 0, 74, 92};
     //int arr[] = {1, 0, 50, 4, 0, 74, 92};
-    int arr[15] = {38, 0, 39, 40, 0, 41, 42, 0, 43, 44, 0, 45, 46, 0, 47};
-    int lastIndex{(sizeof(arr)/sizeof(int)) - 1};//int lastIndex{std::size(arr) - 1}; //int lastIndex{arr.size() - 1};
+    int arr[] = {38, 0, 0, 39, 40, 0, 41, 42, 0, 43, 44, 0, 45, 46, 0, 47};
+    int lastIndex{(sizeof(arr)/sizeof(int)) - 1};
+    //int lastIndex{std::size(arr) - 1}; //int lastIndex{arr.size() - 1};
     int desiredValue{0};
 
     for(int i=0; i<lastIndex; i++)
@@ -39,6 +40,9 @@ int main() {
             move(arr, i, lastIndex);
             arr[lastIndex] = desiredValue;
             lastIndex--;
+            
+            if(arr[i] == desiredValue)
+                i--;
         }
     }
     

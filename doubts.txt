@@ -1,2 +1,2 @@
 can constructor be private in c++ ?
-testing...
+testing.

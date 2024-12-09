@@ -1,4 +1,5 @@
 #include <iostream>
+#include <bits/stdc++.h>
 
 int countAndPrintDigits(unsigned int num)
 {
@@ -26,6 +27,11 @@ int countDigits(unsigned int num)
     return count;
 }
 
+int countWithLog(unsigned int num)
+{
+    return (static_cast<int>(log10(num)) + 1);
+}
+
 int main()
 {
     unsigned int number{0}, numOfDigits{0};
@@ -35,8 +41,12 @@ int main()
     
     numOfDigits = countDigits(number);
     std::cout << "No of digits in " << number << " : " << numOfDigits << std::endl;
+    
     numOfDigits = countAndPrintDigits(number);
     std::cout << "\nNo of digits in " << number << " : " << numOfDigits << std::endl;
 
+    numOfDigits = countWithLog(number);
+    std::cout << "No of digits in " << number << " : " << numOfDigits << std::endl;
+    
     return 0;
 }

@@ -10,7 +10,7 @@
 				"-std=c++17",
 				"${workspaceFolder}/*.cpp",
 				"-o",
-				"${fileDirname}/rooster"
+				"${fileDirname}/app"
 			],
 			"options": {
 				"cwd": "${fileDirname}"

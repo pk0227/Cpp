@@ -29,6 +29,20 @@ unsigned int reverseNumber(unsigned int num)
     return revNum;
 }
 
+unsigned int reverseNumber_(unsigned int num)
+{
+    
+    unsigned int revNum{0};
+    
+    while(num)
+    {
+        revNum = (revNum*10) + (num%10);
+        num /= 10;
+    }
+    
+    return revNum;
+}
+
 int main()
 {
     unsigned int number{0};
@@ -38,5 +52,6 @@ int main()
     
     std::cout << "reverse of given number( " << number << " ) : " << reverseNumber(number) << std::endl;
     std::cout << "Recursive - reverse of given number( " << number << " ) : " << reverseNumberRecursive(number) << std::endl;
+    std::cout << "reverse of given number( " << number << " ) : " << reverseNumber_(number) << std::endl;
     return 0;
 }

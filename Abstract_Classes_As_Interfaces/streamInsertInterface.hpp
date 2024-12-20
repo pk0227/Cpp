@@ -7,7 +7,8 @@ class streamInsertInterface
 {
   public:
     friend std::ostream& operator<<(std::ostream& out, const streamInsertInterface& obj);
-    
+  
+  protected:
     virtual void stream_insert(std::ostream& out) const = 0;
     
 };

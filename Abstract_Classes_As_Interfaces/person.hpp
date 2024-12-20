@@ -17,10 +17,11 @@ class person : public streamInsertInterface
         virtual ~person();
         //friend std::ostream& operator<<(std::ostream& out, const person& obj);
         
-        virtual void stream_insert(std::ostream& out) const override;
-        
+
     protected:
         int m_age{0};
+        std::string getAddress() const;
+        virtual void stream_insert(std::ostream& out) const override;
         
     private:
         std::string m_address{"unknown"};

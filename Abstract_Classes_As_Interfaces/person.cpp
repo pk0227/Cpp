@@ -1,5 +1,10 @@
 #include "person.hpp"
 
+std::string person::getAddress() const
+{
+    return m_address;
+}
+
 person::person() : m_name{"default"}, m_age{0}, m_address{"default"}
 {
     std::cout << "person::person() default constructor called." << std::endl;
